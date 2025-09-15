@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="description" content="주니어 스쿼시 선수를 위한 과학적이고 안전한 스트레칭 전문 앱">
+    <meta name="theme-color" content="#10b981">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="스쿼시 스트레칭">
+    
+    <title>주니어 스쿼시 스트레칭 프로</title>
+    
+    <!-- PWA Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIj4KICA8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgZmlsbD0iIzEwYjk4MSIgcng9IjEwIiB5PSIxMCIgd2lkdGg9IjE3MiIgaGVpZ2h0PSIxNzIiLz4KICA8dGV4dCB4PSI5NiIgeT0iMTEwIiBmb250LXNpemU9IjcwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPuyCpO2KuOyWtuyngDwvdGV4dD4KPC9zdmc+">
+    <link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIj4KICA8cmVjdCB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgZmlsbD0iIzEwYjk4MSIgcng9IjEwIiB5PSIxMCIgd2lkdGg9IjE3MiIgaGVpZ2h0PSIxNzIiLz4KICA8dGV4dCB4PSI5NiIgeT0iMTEwIiBmb250LXNpemU9IjcwIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9InNhbnMtc2VyaWYiPuyCpO2KuOyWtuyngDwvdGV4dD4KPC9zdmc+">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIuyjvOuLiOyWtCDsiqTsv7Dsovwg7Iqk7Yq47Ja27LmtIO2UhOuhnSIsCiAgInNob3J0X25hbWUiOiAi7Iqk7Yq47Ja2IOyVsSIsCiAgImRlc2NyaXB0aW9uIjogIuyjvOuLiOyWtCDsiqTsv7Dsovwg7ISg7IiY66W47J2EIOychO2VnCDqs7XtlZnsoIHsnbTqs6Ag7JWI7KCE7ZWY6rOgIOyViOyghO2VnCDsiqTtirjslrbs5Kcg7KCV66y4IiwKICAic3RhcnRfdXJsIjogIi8iLAogICJkaXNwbGF5IjogInN0YW5kYWxvbmUiLAogICJiYWNrZ3JvdW5kX2NvbG9yIjogIiNmZmZmZmYiLAogICJ0aGVtZV9jb2xvciI6ICIjMTBiOTgxIiwKICAib3JpZW50YXRpb24iOiAicG9ydHJhaXQiLAogICJjYXRlZ29yaWVzIjogWyJmaXRuZXNzIiwgInNwb3J0cyIsICJoZWFsdGgiXSwKICAiaWNvbnMiOiBbCiAgICB7CiAgICAgICJzcmMiOiAiZGF0YTppbWFnZS9zdmcreG1sO2Jhc2U2NCxQSE4yWnlCNGJXeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhkcFpIUm9QU0l4T1RJaUlHaGxhV2RvZEQwaU1Ua3lJajRLSUNBOGNtVmpkQ0IzYVdSMGFEMGlNVGt5SWlCb1pXbG5hSFE5SWpFNU1pSWdabWxzYkQwaUl6RXdZams0TVNJZ2NuZzlJakV3SWlCNVBTSXhNQ0lnZDJsa2RHZzlJakUzTWlJZ2FHVnBaMmgwUFNJeE56SWlMejRLSUNBOGRHVjRkQ0I0UFNJNU5pSWdlVDBpTVRFd0lpQm1iMjUwTFhOcGVtVTlJamN3SWlCbWFXeHNQU0ozYUdsMFpTSWdkR1Y0ZEMxaGJtTm9iM0k5SW0xcFpHUnNaU0lnWm05dWRDMW1ZVzFwYkhrcUluTmhibk10YzJWeWFXWWlQdWlDcE8yS3VPeVd0dXluZ0R3dmRHVjRkRDRLUEM5emRtYysrQT09IiwKICAgICAgInNpemVzIjogIjE5MngxOTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfSwKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3N2Zyt4bWw7YmFzZTY0LFBIM1ZuSUhodGJHeHVjejBpYUhSMGNEb3ZMM2QzZHk1M015NXZjbWN2TWpBd01DOXpkbWNpSUhkcFpIUm9QU0kxTVRJaUlHaGxhV2RvZEQwaU5URXlJajRLSUNBOGNtVmpkQ0IzYVdSMGFEMGlOVEV5SWlCb1pXbG5hSFE5SWpVeE1pSWdabWxzYkQwaUl6RXdZams0TVNJZ2NuZzlJakl3SWlCNVBTSXlNQ0lnZDJsa2RHZzlJalEzTWlJZ2FHVnBaMmgwUFNJME56SWlMejRLSUNBOGRHVjRkQ0I0UFNJeU5UWWlJSGs5SWpJM01pSWdabTl1ZEMxemFYcGxQU0l4TkRBaUlHWnBiR3c5SW5kb2FYUmxJaUIwWlhoMExXRnVZMmh2Y2owaWJXbGtaR3hsU1NJZ1ptOXVkQzFtWVcxcGJIa3FJWE5oYm5NdGMyVnlhV1lpUHVpQ3BPMkt1T3lXdHV5bmdEd3ZkR1Y0ZEQ0S1BDOXpkbWMrIiwKICAgICAgInNpemVzIjogIjUxMng1MTIiLAogICAgICAidHlwZSI6ICJpbWFnZS9zdmcreG1sIgogICAgfQogIF0KfQ==">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #ecfdf5 100%);
+            color: #1f2937;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            /* 터치 최적화 */
+            touch-action: manipulation;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        /* 터치 가능한 요소들은 터치 허용 */
+        button, select, input, [data-action], .clickable {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+        }
+        
+        .app {
+            min-height: 100vh;
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: max(16px, env(safe-area-inset-top));
+            padding-bottom: max(16px, env(safe-area-inset-bottom));
+            padding-left: max(16px, env(safe-area-inset-left));
+            padding-right: max(16px, env(safe-area-inset-right));
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            padding: 24px;
+            text-align: center;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 24px;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            /* 터치 최적화 */
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+            outline: none;
+            /* 최소 터치 영역 보장 */
+            min-height: 48px;
+        }
+        
+        .btn:active {
+            transform: scale(0.98);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.3);
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.3);
+        }
+        
+        .btn-outline {
+            background: white;
+            color: #374151;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .btn-outline:hover, .btn-outline:active {
+            border-color: #10b981;
+            color: #10b981;
+            background: #f0fdf4;
+        }
+        
+        .btn:disabled {
+            background: #f3f4f6 !important;
+            color: #9ca3af !important;
+            cursor: not-allowed !important;
+            transform: none !important;
+            box-shadow: none !important;
+        }
+        
+        .grid {
+            display: grid;
+            gap: 16px;
+        }
+        
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+        
+        .timer {
+            text-align: center;
+            margin: 32px 0;
+        }
+        
+        .timer-display {
+            font-size: 64px;
+            font-weight: 700;
+            color: #1f2937;
+            line-height: 1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .timer.running .timer-display {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .exercise-card {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 20px;
+            margin: 16px 0;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .exercise-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 12px;
+        }
+        
+        .exercise-info {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 16px;
+        }
+        
+        .exercise-instructions {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #374151;
+            margin-bottom: 16px;
+        }
+        
+        .safety-tip {
+            background: #fef3c7;
+            border: 2px solid #fbbf24;
+            border-radius: 12px;
+            padding: 12px;
+            font-size: 13px;
+            color: #92400e;
+        }
+        
+        .safety-tip::before {
+            content: "⚠️ ";
+            font-weight: 700;
+        }
+        
+        .progress-bar {
+            background: #e5e7eb;
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 16px 0;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+        }
+        
+        .btn-control {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            /* 터치 최적화 */
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+            min-height: 48px;
+            outline: none;
+        }
+        
+        .btn-play {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            flex: 2;
+        }
+        
+        .btn-skip {
+            background: #f3f4f6;
+            color: #6b7280;
+        }
+        
+        .btn-skip:hover, .btn-skip:active {
+            background: #e5e7eb;
+        }
+        
+        .profile-setup {
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .form-select, .form-input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            font-size: 16px;
+            background: white;
+            transition: border-color 0.2s ease;
+            /* 터치 최적화 */
+            touch-action: manipulation;
+            outline: none;
+            min-height: 48px;
+        }
+        
+        .form-select:focus, .form-input:focus {
+            border-color: #10b981;
+        }
+        
+        .checkbox-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px;
+            border: 2px solid #e5e7eb;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: white;
+            /* 터치 최적화 */
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+            min-height: 48px;
+            outline: none;
+        }
+        
+        .checkbox-item:hover, .checkbox-item:active {
+            border-color: #d1d5db;
+        }
+        
+        .checkbox-item.selected {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+        
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #d1d5db;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        
+        .checkbox.checked {
+            background: #10b981;
+            border-color: #10b981;
+            color: white;
+        }
+        
+        .completion-screen {
+            text-align: center;
+            padding: 40px 24px;
+        }
+        
+        .completion-icon {
+            font-size: 64px;
+            margin-bottom: 24px;
+            display: block;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0;
+        }
+        
+        .stat-card {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #e2e8f0;
+        }
+        
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #10b981;
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 12px;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .education-content {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-right: 8px;
+        }
+        
+        .education-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        
+        .education-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 8px;
+        }
+        
+        .education-card p, .education-card ul {
+            font-size: 14px;
+            color: #4b5563;
+            line-height: 1.5;
+        }
+        
+        .education-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .education-card li {
+            padding: 4px 0;
+        }
+        
+        .education-card li::before {
+            content: "• ";
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .install-prompt {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            display: none;
+            align-items: center;
+            gap: 12px;
+            z-index: 1000;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .install-prompt button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1);
+            min-height: 36px;
+        }
+        
+        .offline-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #f59e0b;
+            color: white;
+            padding: 8px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 1000;
+            display: none;
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.3s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* 터치 피드백 개선 */
+        .btn:active, .btn-control:active, .checkbox-item:active {
+            transform: scale(0.96);
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 480px) {
+            .app {
+                padding: 8px;
+            }
+            
+            .timer-display {
+                font-size: 48px;
+            }
+            
+            .header h1 {
+                font-size: 20px;
+            }
+            
+            .content {
+                padding: 16px;
+            }
+            
+            .btn {
+                font-size: 15px;
+                padding: 14px;
+            }
+            
+            .btn-control {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+        
+        /* Dark mode support */
+        @media (prefers-color-scheme: dark) {
+            body {
+                background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
+            }
+            
+            .container {
+                background: #374151;
+                color: white;
+            }
+            
+            .exercise-card {
+                background: #4b5563;
+                border-color: #6b7280;
+            }
+            
+            .form-select, .form-input {
+                background: #4b5563;
+                border-color: #6b7280;
+                color: white;
+            }
+            
+            .checkbox-item {
+                background: #4b5563;
+                border-color: #6b7280;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="offlineBanner" class="offline-banner">
+        🔄 오프라인 모드 - 인터넷 연결을 확인해주세요
+    </div>
+    
+    <div class="app">
+        <div class="container">
+            <div id="app-content">
+                <!-- Content will be rendered here -->
+            </div>
+        </div>
+    </div>
+    
+    <div id="installPrompt" class="install-prompt">
+        <div>
+            <strong>📱 스마트폰에 설치하기</strong>
+            <p style="font-size: 12px; margin: 4px 0 0 0;">오프라인에서도 사용 가능</p>
+        </div>
+        <button onclick="installApp()">설치</button>
+        <button onclick="dismissInstall()" style="background: transparent;">나중에</button>
+    </div>
+
+    <script>
+        // App State Management
+        class StretchingApp {
+            constructor() {
+                this.state = {
+                    currentScreen: 'welcome',
+                    userProfile: this.loadProfile(),
+                    currentRoutine: null,
+                    currentPhase: 0,
+                    currentExercise: 0,
+                    timeRemaining: 0,
+                    isRunning: false,
+                    sessionProgress: this.loadProgress(),
+                    timerInterval: null
+                };
+                
+                this.routines = {
+                    warmup: {
+                        id: 'warmup',
+                        title: '경기 전 웜업 (동적 스트레칭)',
+                        description: '스쿼시 경기를 위한 3단계 과학적 준비운동',
+                        color: '#10b981',
+                        totalTime: 18, // minutes
+                        phases: [
+                            {
+                                name: '1단계: 일반적 활성화',
+                                description: '심박수 상승 및 체온 조절',
+                                exercises: [
+                                    {
+                                        name: '가벼운 조깅 & 점핑잭',
+                                        duration: 180,
+                                        instructions: '코트 주변을 가볍게 조깅하거나 제자리에서 점핑잭을 실시하여 몸을 예열하세요. 숨이 약간 찰 정도의 강도로 진행합니다.',
+                                        targetMuscles: '전신, 심폐지구력',
+                                        safetyTip: '갑작스러운 움직임은 피하고 점진적으로 강도를 높이세요.'
+                                    },
+                                    {
+                                        name: '팔 돌리기 & 어깨 풀기',
+                                        duration: 60,
+                                        instructions: '앞으로, 뒤로 크게 원을 그리며 어깨를 풀어줍니다. 작은 원에서 시작하여 점차 크게 만드세요.',
+                                        targetMuscles: '어깨, 상체',
+                                        safetyTip: '어깨에 통증이 있다면 작은 범위에서 시작하세요.'
+                                    }
+                                ]
+                            },
+                            {
+                                name: '2단계: 전신 가동성 확보',
+                                description: '관절 가동범위 증대 및 근육 활성화',
+                                exercises: [
+                                    {
+                                        name: '몸통 풍차 돌리기',
+                                        duration: 60,
+                                        instructions: '양 다리를 어깨너비로 벌리고 선 후, 허리를 숙여 왼팔을 오른발 쪽으로, 오른팔은 하늘로 뻗어 교차 동작을 20-30회 반복합니다.',
+                                        targetMuscles: '몸통, 등, 허리',
+                                        safetyTip: '과도한 반동은 금지. 부드럽고 통제된 움직임으로 진행하세요.',
+                                        reps: '20-30회'
+                                    },
+                                    {
+                                        name: '다리 앞뒤 & 좌우 흔들기',
+                                        duration: 120,
+                                        instructions: '벽이나 파트너를 잡고 균형을 유지하며 한쪽 다리를 앞뒤로, 그다음 좌우로 부드럽게 흔듭니다.',
+                                        targetMuscles: '햄스트링, 엉덩이 굴곡근',
+                                        safetyTip: '균형을 잃지 않도록 지지대를 활용하세요.'
+                                    },
+                                    {
+                                        name: '하이 니 & 버트 킥',
+                                        duration: 60,
+                                        instructions: '제자리에서 가볍게 뛰면서 무릎을 가슴 높이까지 올리는 하이 니와 발뒤꿈치를 엉덩이로 차는 버트 킥을 번갈아 진행합니다.',
+                                        targetMuscles: '대퇴사두근, 햄스트링, 둔근',
+                                        safetyTip: '착지 시 무릎에 무리가 가지 않도록 부드럽게 착지하세요.'
+                                    },
+                                    {
+                                        name: '고관절 회전 운동',
+                                        duration: 90,
+                                        instructions: '무릎을 90도로 들어올려 바깥 방향으로 원을 그리듯 회전시킵니다. 엉덩이 관절의 가동성을 높입니다.',
+                                        targetMuscles: '고관절, 엉덩이',
+                                        safetyTip: '통증이 느껴지면 회전 범위를 줄이세요.'
+                                    }
+                                ]
+                            },
+                            {
+                                name: '3단계: 스쿼시 특정 동작 활성화',
+                                description: '실제 경기 동작 모방 및 근신경 활성화',
+                                exercises: [
+                                    {
+                                        name: '걷는 런지 & 회전 동작',
+                                        duration: 120,
+                                        instructions: '앞으로 한 발을 크게 내딛어 런지 자세를 취하고, 앞쪽 다리 위로 상체를 비틉니다. 각 다리당 10회씩 반복합니다.',
+                                        targetMuscles: '대퇴사두근, 둔근, 엉덩이 굴곡근, 코어',
+                                        safetyTip: '무릎이 발끝을 넘지 않도록 주의하세요.'
+                                    },
+                                    {
+                                        name: '고스팅 (Ghosting) 훈련',
+                                        duration: 300,
+                                        instructions: '라켓을 들고 코트의 네 귀퉁이와 중앙 T-존으로 빠르게 이동하며 런지 자세로 가상의 공을 치는 동작을 연습합니다.',
+                                        targetMuscles: '전신 (경기 특화)',
+                                        safetyTip: '충분한 공간을 확보하고 미끄러지지 않는 신발을 착용하세요.'
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    cooldown: {
+                        id: 'cooldown',
+                        title: '경기 후 쿨다운 (정적 스트레칭)',
+                        description: '근육 이완 및 회복 촉진을 위한 체계적 정리운동',
+                        color: '#3b82f6',
+                        totalTime: 15, // minutes
+                        phases: [
+                            {
+                                name: '1단계: 점진적 심박수 감소',
+                                description: '경기 후 안전한 심박수 정상화',
+                                exercises: [
+                                    {
+                                        name: '천천히 걷기',
+                                        duration: 180,
+                                        instructions: '코트를 천천히 걸으며 호흡을 정상화하고 심박수를 점진적으로 낮춥니다. 갑작스럽게 멈추지 마세요.',
+                                        targetMuscles: '심폐기능 정상화',
+                                        safetyTip: '어지러움이 느껴지면 즉시 앉아서 휴식하세요.'
+                                    }
+                                ]
+                            },
+                            {
+                                name: '2단계: 주요 근육군 정적 스트레칭',
+                                description: '경기로 긴장된 근육의 이완 및 회복',
+                                exercises: [
+                                    {
+                                        name: '햄스트링 스트레칭',
+                                        duration: 30,
+                                        instructions: '바닥에 앉아 다리를 곧게 뻗고 상체를 앞으로 숙이거나, 누운 자세에서 한쪽 다리를 가슴으로 당겨 허벅지 뒤쪽을 늘립니다.',
+                                        targetMuscles: '허벅지 뒤쪽',
+                                        safetyTip: '반동을 주지 말고 부드럽게 늘려주세요. 통증이 아닌 당기는 느낌에 집중하세요.'
+                                    },
+                                    {
+                                        name: '대퇴사두근 스트레칭',
+                                        duration: 30,
+                                        instructions: '선 자세에서 벽을 짚고 한쪽 다리를 뒤로 구부려 손으로 잡고, 발뒤꿈치를 엉덩이 쪽으로 부드럽게 당깁니다.',
+                                        targetMuscles: '허벅지 앞쪽',
+                                        safetyTip: '무릎이 바깥쪽으로 벌어지지 않도록 주의하고, 허리가 과도하게 꺾이지 않게 하세요.'
+                                    },
+                                    {
+                                        name: '장요근 스트레칭',
+                                        duration: 30,
+                                        instructions: '런지 자세에서 뒤쪽 무릎을 바닥에 대고, 골반을 앞으로 부드럽게 밀어 허벅지 앞쪽과 골반 앞쪽을 늘립니다.',
+                                        targetMuscles: '엉덩이 굴곡근, 골반',
+                                        safetyTip: '허리가 과도하게 꺾이지 않도록 복부에 살짝 힘을 주세요.'
+                                    },
+                                    {
+                                        name: '종아리 스트레칭',
+                                        duration: 30,
+                                        instructions: '벽을 짚고 한 발을 뒤로 뻗어 발뒤꿈치를 바닥에 지그시 누르며 종아리 근육을 늘립니다.',
+                                        targetMuscles: '종아리',
+                                        safetyTip: '발뒤꿈치가 바닥에서 떨어지지 않도록 유지하세요.'
+                                    },
+                                    {
+                                        name: '둔근 스트레칭',
+                                        duration: 30,
+                                        instructions: '바닥에 앉아 한쪽 다리를 반대쪽 무릎 위에 올리고, 상체를 앞으로 숙여 엉덩이 근육을 늘립니다.',
+                                        targetMuscles: '엉덩이',
+                                        safetyTip: '허리를 구부리지 말고 골반에서 앞으로 숙이세요.'
+                                    },
+                                    {
+                                        name: '어깨 & 삼두근 스트레칭',
+                                        duration: 30,
+                                        instructions: '한쪽 팔을 가슴 앞으로 교차시켜 다른 팔로 지탱하거나, 팔꿈치를 구부려 머리 뒤로 넘겨 삼두근을 늘립니다.',
+                                        targetMuscles: '어깨, 삼두근',
+                                        safetyTip: '목에 무리가 가지 않도록 부드럽게 진행하세요.'
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                };
+                
+                this.init();
+            }
+            
+            init() {
+                if (this.state.userProfile.age) {
+                    this.state.currentScreen = 'main';
+                }
+                this.render();
+                this.setupEventListeners();
+            }
+            
+            loadProfile() {
+                try {
+                    return JSON.parse(localStorage.getItem('userProfile')) || { age: '', experience: '', injuries: [] };
+                } catch (e) {
+                    return { age: '', experience: '', injuries: [] };
+                }
+            }
+            
+            saveProfile() {
+                localStorage.setItem('userProfile', JSON.stringify(this.state.userProfile));
+            }
+            
+            loadProgress() {
+                try {
+                    return JSON.parse(localStorage.getItem('sessionProgress')) || [];
+                } catch (e) {
+                    return [];
+                }
+            }
+            
+            saveProgress() {
+                localStorage.setItem('sessionProgress', JSON.stringify(this.state.sessionProgress));
+            }
+            
+            setupEventListeners() {
+                // 터치와 클릭 이벤트 모두 처리
+                const handleInteraction = (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    let target = e.target;
+                    while (target && !target.matches('[data-action]') && target !== document.body) {
+                        target = target.parentElement;
+                    }
+                    
+                    if (target && target.matches('[data-action]')) {
+                        const action = target.dataset.action;
+                        const value = target.dataset.value;
+                        this.handleAction(action, value, target);
+                    }
+                };
+                
+                // 클릭과 터치 이벤트 모두 바인딩
+                document.addEventListener('click', handleInteraction, { passive: false });
+                document.addEventListener('touchend', handleInteraction, { passive: false });
+                
+                // 폼 이벤트 처리
+                document.addEventListener('change', (e) => {
+                    if (e.target.matches('[data-profile]')) {
+                        const field = e.target.dataset.profile;
+                        this.updateProfile(field, e.target.value);
+                    }
+                });
+                
+                // 더블탭 확대 방지
+                let lastTouchEnd = 0;
+                document.addEventListener('touchend', (e) => {
+                    const now = Date.now();
+                    if (now - lastTouchEnd <= 300) {
+                        e.preventDefault();
+                    }
+                    lastTouchEnd = now;
+                }, false);
+            }
+            
+            handleAction(action, value, element) {
+                console.log('Action triggered:', action, value); // 디버깅용
+                
+                switch (action) {
+                    case 'start-routine':
+                        this.startRoutine(value);
+                        break;
+                    case 'next-exercise':
+                        this.nextExercise();
+                        break;
+                    case 'prev-exercise':
+                        this.prevExercise();
+                        break;
+                    case 'toggle-timer':
+                        this.toggleTimer();
+                        break;
+                    case 'complete-profile':
+                        this.completeProfile();
+                        break;
+                    case 'toggle-injury':
+                        this.toggleInjury(value);
+                        break;
+                    case 'navigate':
+                        this.navigate(value);
+                        break;
+                    case 'reset-profile':
+                        this.resetProfile();
+                        break;
+                }
+            }
+            
+            updateProfile(field, value) {
+                this.state.userProfile[field] = value;
+                this.render();
+            }
+            
+            toggleInjury(injury) {
+                const injuries = this.state.userProfile.injuries;
+                
+                if (injury === '없음') {
+                    if (injuries.includes('없음')) {
+                        this.state.userProfile.injuries = [];
+                    } else {
+                        this.state.userProfile.injuries = ['없음'];
+                    }
+                } else {
+                    if (injuries.includes(injury)) {
+                        this.state.userProfile.injuries = injuries.filter(i => i !== injury);
+                    } else {
+                        this.state.userProfile.injuries = injuries.filter(i => i !== '없음').concat(injury);
+                    }
+                }
+                
+                this.render();
+            }
+            
+            completeProfile() {
+                const { age, experience, injuries } = this.state.userProfile;
+                if (age && experience && injuries.length > 0) {
+                    this.saveProfile();
+                    this.navigate('main');
+                }
+            }
+            
+            resetProfile() {
+                if (confirm('프로필을 초기화하시겠습니까?')) {
+                    this.state.userProfile = { age: '', experience: '', injuries: [] };
+                    localStorage.removeItem('userProfile');
+                    this.navigate('welcome');
+                }
+            }
+            
+            startRoutine(routineId) {
+                this.state.currentRoutine = this.routines[routineId];
+                this.state.currentPhase = 0;
+                this.state.currentExercise = 0;
+                this.state.timeRemaining = this.getCurrentExercise().duration;
+                this.state.isRunning = false;
+                this.navigate('exercise');
+            }
+            
+            getCurrentExercise() {
+                return this.state.currentRoutine.phases[this.state.currentPhase].exercises[this.state.currentExercise];
+            }
+            
+            nextExercise() {
+                const phase = this.state.currentRoutine.phases[this.state.currentPhase];
+                
+                if (this.state.currentExercise < phase.exercises.length - 1) {
+                    this.state.currentExercise++;
+                } else if (this.state.currentPhase < this.state.currentRoutine.phases.length - 1) {
+                    this.state.currentPhase++;
+                    this.state.currentExercise = 0;
+                } else {
+                    // Routine completed
+                    this.completeRoutine();
+                    return;
+                }
+                
+                this.state.timeRemaining = this.getCurrentExercise().duration;
+                this.state.isRunning = false;
+                this.render();
+            }
+            
+            prevExercise() {
+                if (this.state.currentExercise > 0) {
+                    this.state.currentExercise--;
+                } else if (this.state.currentPhase > 0) {
+                    this.state.currentPhase--;
+                    const phase = this.state.currentRoutine.phases[this.state.currentPhase];
+                    this.state.currentExercise = phase.exercises.length - 1;
+                }
+                
+                this.state.timeRemaining = this.getCurrentExercise().duration;
+                this.state.isRunning = false;
+                this.render();
+            }
+            
+            toggleTimer() {
+                this.state.isRunning = !this.state.isRunning;
+                
+                if (this.state.isRunning) {
+                    this.state.timerInterval = setInterval(() => {
+                        this.state.timeRemaining--;
+                        this.updateTimerDisplay();
+                        
+                        if (this.state.timeRemaining <= 0) {
+                            this.state.isRunning = false;
+                            clearInterval(this.state.timerInterval);
+                            this.render();
+                            this.playSound();
+                        }
+                    }, 1000);
+                } else {
+                    clearInterval(this.state.timerInterval);
+                }
+                
+                this.render();
+            }
+            
+            completeRoutine() {
+                const session = {
+                    routine: this.state.currentRoutine.title,
+                    date: new Date().toISOString(),
+                    duration: this.state.currentRoutine.totalTime
+                };
+                
+                this.state.sessionProgress.push(session);
+                this.saveProgress();
+                this.navigate('completion');
+            }
+            
+            navigate(screen) {
+                this.state.currentScreen = screen;
+                this.render();
+            }
+            
+            formatTime(seconds) {
+                const mins = Math.floor(seconds / 60);
+                const secs = seconds % 60;
+                return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+            }
+            
+            updateTimerDisplay() {
+                const timerEl = document.querySelector('.timer-display');
+                if (timerEl) {
+                    timerEl.textContent = this.formatTime(this.state.timeRemaining);
+                }
+            }
+            
+            playSound() {
+                // Create a simple beep sound
+                try {
+                    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                    const oscillator = audioContext.createOscillator();
+                    const gainNode = audioContext.createGain();
+                    
+                    oscillator.connect(gainNode);
+                    gainNode.connect(audioContext.destination);
+                    
+                    oscillator.frequency.value = 800;
+                    oscillator.type = 'sine';
+                    
+                    gainNode.gain.setValueAtTime(0.3, audioContext.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+                    
+                    oscillator.start(audioContext.currentTime);
+                    oscillator.stop(audioContext.currentTime + 0.5);
+                } catch (e) {
+                    // Fallback for browsers that don't support Web Audio API
+                    console.log('Timer finished!');
+                    
+                    // 대안: 진동 (모바일에서 지원되는 경우)
+                    if ('vibrate' in navigator) {
+                        navigator.vibrate([200, 100, 200]);
+                    }
+                }
+            }
+            
+            getProgressPercentage() {
+                const totalExercises = this.state.currentRoutine.phases.reduce((total, phase) => total + phase.exercises.length, 0);
+                const completedExercises = this.state.currentRoutine.phases.slice(0, this.state.currentPhase).reduce((total, phase) => total + phase.exercises.length, 0) + this.state.currentExercise;
+                return Math.round((completedExercises / totalExercises) * 100);
+            }
+            
+            render() {
+                const content = document.getElementById('app-content');
+                content.innerHTML = this.getScreenHTML();
+                content.className = 'fade-in';
+            }
+            
+            getScreenHTML() {
+                switch (this.state.currentScreen) {
+                    case 'welcome':
+                        return this.renderWelcomeScreen();
+                    case 'main':
+                        return this.renderMainScreen();
+                    case 'exercise':
+                        return this.renderExerciseScreen();
+                    case 'completion':
+                        return this.renderCompletionScreen();
+                    case 'education':
+                        return this.renderEducationScreen();
+                    case 'progress':
+                        return this.renderProgressScreen();
+                    default:
+                        return this.renderWelcomeScreen();
+                }
+            }
+            
+            renderWelcomeScreen() {
+                const { age, experience, injuries } = this.state.userProfile;
+                const isComplete = age && experience && injuries.length > 0;
+                
+                return `
+                    <div class="header">
+                        <h1>🎾 스쿼시 스트레칭 프로</h1>
+                        <p>안전하고 과학적인 주니어 전용 가이드</p>
+                    </div>
+                    <div class="content profile-setup">
+                        <div class="form-group">
+                            <label class="form-label">나이 <span style="color: #ef4444">*</span></label>
+                            <select class="form-select" data-profile="age">
+                                <option value="">나이를 선택하세요</option>
+                                <option value="8-9" ${age === '8-9' ? 'selected' : ''}>8-9세</option>
+                                <option value="10-12" ${age === '10-12' ? 'selected' : ''}>10-12세</option>
+                                <option value="13-15" ${age === '13-15' ? 'selected' : ''}>13-15세</option>
+                                <option value="16-18" ${age === '16-18' ? 'selected' : ''}>16-18세</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">스쿼시 경험 <span style="color: #ef4444">*</span></label>
+                            <select class="form-select" data-profile="experience">
+                                <option value="">경험 수준을 선택하세요</option>
+                                <option value="beginner" ${experience === 'beginner' ? 'selected' : ''}>초급 (1년 미만)</option>
+                                <option value="intermediate" ${experience === 'intermediate' ? 'selected' : ''}>중급 (1-3년)</option>
+                                <option value="advanced" ${experience === 'advanced' ? 'selected' : ''}>고급 (3년 이상)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">현재 부상이나 통증 부위 <span style="color: #ef4444">*</span></label>
+                            <div class="checkbox-group">
+                                ${['무릎', '발목', '허리', '어깨', '손목', '없음'].map(injury => `
+                                    <div class="checkbox-item ${injuries.includes(injury) ? 'selected' : ''}" data-action="toggle-injury" data-value="${injury}">
+                                        <div class="checkbox ${injuries.includes(injury) ? 'checked' : ''}">
+                                            ${injuries.includes(injury) ? '✓' : ''}
+                                        </div>
+                                        <span>${injury}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" data-action="complete-profile" ${!isComplete ? 'disabled' : ''}>
+                            ${isComplete ? '프로필 완료하기' : '모든 항목을 입력해주세요'}
+                        </button>
+                        
+                        <div class="safety-tip" style="margin-top: 20px;">
+                            <strong>주니어 선수 안전 수칙:</strong><br>
+                            성장기 선수의 안전을 위해 통증이 느껴지면 즉시 중단하고, 과도한 스트레칭은 피해주세요. 성장판 보호가 가장 중요합니다.
+                            ${age === '8-9' ? '<br><br><strong>⚠️ 8-9세 특별 주의:</strong> 더욱 부드럽고 짧은 시간으로 진행하며, 반드시 보호자 지도하에 실시하세요.' : ''}
+                        </div>
+                    </div>
+                `;
+            }
+            
+            renderMainScreen() {
+                const { age, experience } = this.state.userProfile;
+                const totalSessions = this.state.sessionProgress.length;
+                const warmupSessions = this.state.sessionProgress.filter(s => s.routine.includes('웜업')).length;
+                
+                return `
+                    <div class="header">
+                        <h1>🎾 스쿼시 스트레칭 프로</h1>
+                        <p>안전하고 과학적인 스트레칭으로 경기력 향상</p>
+                        <div style="margin-top: 12px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <span style="background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 12px;">
+                                ${age} • ${experience === 'beginner' ? '초급' : experience === 'intermediate' ? '중급' : '고급'}
+                            </span>
+                            <button style="background: rgba(255,255,255,0.2); border: none; color: white; padding: 4px 8px; border-radius: 50%; cursor: pointer; touch-action: manipulation;" data-action="reset-profile" title="프로필 초기화">⚙️</button>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="grid" style="gap: 16px;">
+                            <button class="btn btn-primary" data-action="start-routine" data-value="warmup">
+                                <div style="text-align: left;">
+                                    <div style="font-size: 18px; font-weight: 700; margin-bottom: 4px;">🔥 경기 전 웜업</div>
+                                    <div style="font-size: 14px; opacity: 0.9;">동적 스트레칭 • 15-20분</div>
+                                    <div style="font-size: 12px; opacity: 0.8;">3단계 과학적 준비운동</div>
+                                </div>
+                            </button>
+                            
+                            <button class="btn btn-secondary" data-action="start-routine" data-value="cooldown">
+                                <div style="text-align: left;">
+                                    <div style="font-size: 18px; font-weight: 700; margin-bottom: 4px;">❄️ 경기 후 쿨다운</div>
+                                    <div style="font-size: 14px; opacity: 0.9;">정적 스트레칭 • 15-20분</div>
+                                    <div style="font-size: 12px; opacity: 0.8;">근육 이완 및 회복 촉진</div>
+                                </div>
+                            </button>
+                        </div>
+                        
+                        <div class="stats-grid" style="margin: 24px 0;">
+                            <div class="stat-card">
+                                <div class="stat-value">${totalSessions}</div>
+                                <div class="stat-label">완료 세션</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">${warmupSessions}</div>
+                                <div class="stat-label">웜업 세션</div>
+                            </div>
+                        </div>
+                        
+                        <div class="grid grid-2" style="gap: 12px;">
+                            <button class="btn btn-outline" data-action="navigate" data-value="education">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 24px; margin-bottom: 8px;">📚</div>
+                                    <div style="font-size: 14px; font-weight: 600;">교육 센터</div>
+                                </div>
+                            </button>
+                            
+                            <button class="btn btn-outline" data-action="navigate" data-value="progress">
+                                <div style="text-align: center;">
+                                    <div style="font-size: 24px; margin-bottom: 8px;">📊</div>
+                                    <div style="font-size: 14px; font-weight: 600;">진행 상황</div>
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            renderExerciseScreen() {
+                const exercise = this.getCurrentExercise();
+                const phase = this.state.currentRoutine.phases[this.state.currentPhase];
+                const progress = this.getProgressPercentage();
+                const isFirstExercise = this.state.currentPhase === 0 && this.state.currentExercise === 0;
+                
+                return `
+                    <div class="header">
+                        <h1>${this.state.currentRoutine.title}</h1>
+                        <p>${phase.name}</p>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${progress}%"></div>
+                        </div>
+                        <div style="font-size: 12px; opacity: 0.9; margin-top: 8px;">
+                            진행률: ${progress}%
+                        </div>
+                    </div>
+                    <div class="content">
+                        <div class="exercise-card">
+                            <div class="exercise-title">${exercise.name}</div>
+                            <div class="exercise-info">
+                                <strong>대상 근육:</strong> ${exercise.targetMuscles}
+                                ${exercise.reps ? `<br><strong>반복 횟수:</strong> ${exercise.reps}` : ''}
+                            </div>
+                            
+                            <div class="timer ${this.state.isRunning ? 'running' : ''}">
+                                <div class="timer-display">${this.formatTime(this.state.timeRemaining)}</div>
+                            </div>
+                            
+                            <div class="exercise-instructions">
+                                <strong>동작 방법:</strong><br>
+                                ${exercise.instructions}
+                            </div>
+                            
+                            ${exercise.safetyTip ? `
+                                <div class="safety-tip">
+                                    <strong>안전 수칙:</strong> ${exercise.safetyTip}
+                                </div>
+                            ` : ''}
+                        </div>
+                        
+                        <div class="controls">
+                            <button class="btn-control btn-skip" data-action="prev-exercise" ${isFirstExercise ? 'disabled' : ''}>
+                                ⏮️ 이전
+                            </button>
+                            <button class="btn-control btn-play" data-action="toggle-timer">
+                                ${this.state.isRunning ? '⏸️ 일시정지' : '▶️ 시작'}
+                            </button>
+                            <button class="btn-control btn-skip" data-action="next-exercise">
+                                다음 ⏭️
+                            </button>
+                        </div>
+                        
+                        <button class="btn btn-outline" data-action="navigate" data-value="main" style="margin-top: 16px;">
+                            🏠 메인으로 돌아가기
+                        </button>
+                    </div>
+                `;
+            }
+            
+            renderCompletionScreen() {
+                return `
+                    <div class="completion-screen">
+                        <span class="completion-icon">🎉</span>
+                        <h1 style="font-size: 28px; font-weight: 700; color: #1f2937; margin-bottom: 16px;">운동 완료!</h1>
+                        <p style="color: #6b7280; margin-bottom: 32px;">훌륭합니다! 모든 스트레칭을 완료했습니다.</p>
+                        
+                        <div style="background: #f0fdf4; border: 2px solid #10b981; border-radius: 16px; padding: 20px; margin-bottom: 24px;">
+                            <h3 style="color: #065f46; font-weight: 700; margin-bottom: 8px;">완료한 운동</h3>
+                            <p style="color: #047857; font-weight: 600;">${this.state.currentRoutine.title}</p>
+                            <p style="color: #059669; font-size: 14px;">${new Date().toLocaleDateString('ko-KR')} 완료</p>
+                        </div>
+                        
+                        <div class="grid grid-2" style="gap: 16px; margin-bottom: 24px;">
+                            <button class="btn btn-primary" data-action="navigate" data-value="main">
+                                🏠 메인 화면
+                            </button>
+                            <button class="btn btn-outline" data-action="navigate" data-value="progress">
+                                📊 진행 상황
+                            </button>
+                        </div>
+                        
+                        <div style="background: #eff6ff; border: 2px solid #3b82f6; border-radius: 12px; padding: 16px; font-size: 14px; color: #1e40af;">
+                            <strong>💡 운동 후 팁:</strong><br>
+                            충분한 수분 섭취와 적절한 휴식을 취하세요. 몸의 변화를 주의깊게 관찰하고, 이상이 있으면 즉시 휴식하세요.
+                        </div>
+                    </div>
+                `;
+            }
+            
+            renderEducationScreen() {
+                return `
+                    <div class="header">
+                        <h1>📚 교육 센터</h1>
+                        <p>올바른 스트레칭 방법을 배워보세요</p>
+                    </div>
+                    <div class="content">
+                        <div class="education-content">
+                            <div class="education-card">
+                                <h3>🔄 동적 vs 정적 스트레칭</h3>
+                                <p><strong>동적 스트레칭:</strong> 경기 전에 실시하며, 움직이면서 근육을 예열합니다. 혈액순환을 촉진하고 신경계를 활성화합니다.</p>
+                                <p><strong>정적 스트레칭:</strong> 경기 후에 실시하며, 근육을 이완시켜 회복을 돕습니다. 젖산 제거와 근육통 예방에 효과적입니다.</p>
+                            </div>
+                            
+                            <div class="education-card" style="background: #fef3c7; border-color: #f59e0b;">
+                                <h3 style="color: #92400e;">⚠️ 주니어 선수 특별 주의사항</h3>
+                                <ul style="color: #92400e;">
+                                    <li>성장판 보호를 위해 과도한 스트레칭 금지</li>
+                                    <li>통증이 아닌 '당기는' 느낌에서 멈추기</li>
+                                    <li>반동을 이용한 스트레칭 절대 금지</li>
+                                    <li>충분한 수분 섭취 및 휴식</li>
+                                    <li>점진적인 훈련 강도 증가</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="education-card" style="background: #eff6ff; border-color: #3b82f6;">
+                                <h3 style="color: #1e40af;">🎾 스쿼시 부상 예방</h3>
+                                <ul style="color: #1e40af;">
+                                    <li>경기 전 반드시 충분한 웜업 (15-20분)</li>
+                                    <li>올바른 신발 착용 (논슬립 스쿼시화)</li>
+                                    <li>정기적인 근력 운동 병행</li>
+                                    <li>적절한 휴식과 회복 시간 확보</li>
+                                    <li>올바른 자세와 기술 습득</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="education-card" style="background: #f0fdf4; border-color: #10b981;">
+                                <h3 style="color: #065f46;">💪 스쿼시 주요 근육군</h3>
+                                <p style="color: #047857;"><strong>하체:</strong> 대퇴사두근, 햄스트링, 둔근, 종아리 - 런지와 빠른 이동을 위해 중요</p>
+                                <p style="color: #047857;"><strong>상체:</strong> 어깨, 삼두근, 등 - 강력한 스윙을 위해 필요</p>
+                                <p style="color: #047857;"><strong>코어:</strong> 복부, 허리 - 몸통 회전과 안정성을 위해 핵심</p>
+                            </div>
+                        </div>
+                        
+                        <button class="btn btn-primary" data-action="navigate" data-value="main" style="margin-top: 20px;">
+                            🏠 메인으로 돌아가기
+                        </button>
+                    </div>
+                `;
+            }
+            
+            renderProgressScreen() {
+                const totalSessions = this.state.sessionProgress.length;
+                const warmupSessions = this.state.sessionProgress.filter(s => s.routine.includes('웜업')).length;
+                const cooldownSessions = this.state.sessionProgress.filter(s => s.routine.includes('쿨다운')).length;
+                const recentSessions = this.state.sessionProgress.slice(-5).reverse();
+                
+                return `
+                    <div class="header">
+                        <h1>📊 진행 상황</h1>
+                        <p>당신의 스트레칭 기록을 확인하세요</p>
+                    </div>
+                    <div class="content">
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-value">${totalSessions}</div>
+                                <div class="stat-label">총 완료 세션</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">${warmupSessions}</div>
+                                <div class="stat-label">웜업 세션</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">${cooldownSessions}</div>
+                                <div class="stat-label">쿨다운 세션</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-value">${Math.round(this.state.sessionProgress.reduce((total, s) => total + (s.duration || 0), 0) / 60)}</div>
+                                <div class="stat-label">총 운동 시간 (시간)</div>
+                            </div>
+                        </div>
+                        
+                        <h3 style="font-weight: 700; color: #1f2937; margin: 24px 0 16px 0;">최근 활동</h3>
+                        
+                        ${totalSessions === 0 ? `
+                            <div style="text-align: center; padding: 40px 20px; color: #6b7280;">
+                                <div style="font-size: 48px; margin-bottom: 16px;">🎯</div>
+                                <p>아직 완료한 세션이 없습니다.</p>
+                                <p style="font-size: 14px; margin-top: 8px;">첫 번째 스트레칭 루틴을 시작해보세요!</p>
+                            </div>
+                        ` : `
+                            <div style="space-y: 12px;">
+                                ${recentSessions.map(session => `
+                                    <div style="background: white; border: 2px solid #e5e7eb; border-radius: 12px; padding: 16px; margin-bottom: 12px;">
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                            <div>
+                                                <div style="font-weight: 600; color: #1f2937; margin-bottom: 4px;">
+                                                    ${session.routine.includes('웜업') ? '🔥' : '❄️'} ${session.routine}
+                                                </div>
+                                                <div style="font-size: 12px; color: #6b7280;">
+                                                    ${session.duration ? `${session.duration}분` : '완료'}
+                                                </div>
+                                            </div>
+                                            <div style="font-size: 12px; color: #6b7280; text-align: right;">
+                                                ${new Date(session.date).toLocaleDateString('ko-KR')}<br>
+                                                ${new Date(session.date).toLocaleTimeString('ko-KR', { hour: '2-digit', minute: '2-digit' })}
+                                            </div>
+                                        </div>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            
+                            ${totalSessions >= 5 ? `
+                                <div style="background: #f0fdf4; border: 2px solid #10b981; border-radius: 12px; padding: 16px; margin-top: 20px; text-align: center;">
+                                    <div style="font-size: 24px; margin-bottom: 8px;">🏆</div>
+                                    <div style="font-weight: 700; color: #065f46; margin-bottom: 4px;">꾸준함의 달인!</div>
+                                    <div style="font-size: 14px; color: #047857;">이미 ${totalSessions}회의 세션을 완료했습니다!</div>
+                                </div>
+                            ` : ''}
+                        `}
+                        
+                        <button class="btn btn-primary" data-action="navigate" data-value="main" style="margin-top: 20px;">
+                            🏠 메인으로 돌아가기
+                        </button>
+                    </div>
+                `;
+            }
+        }
+        
+        // PWA Installation
+        let deferredPrompt;
+        const installPrompt = document.getElementById('installPrompt');
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            showInstallPrompt();
+        });
+        
+        function showInstallPrompt() {
+            if (!localStorage.getItem('installDismissed')) {
+                installPrompt.style.display = 'flex';
+            }
+        }
+        
+        function installApp() {
+            if (deferredPrompt) {
+                deferredPrompt.prompt();
+                deferredPrompt.userChoice.then((choiceResult) => {
+                    if (choiceResult.outcome === 'accepted') {
+                        console.log('App installed');
+                    }
+                    deferredPrompt = null;
+                    installPrompt.style.display = 'none';
+                });
+            }
+        }
+        
+        function dismissInstall() {
+            installPrompt.style.display = 'none';
+            localStorage.setItem('installDismissed', 'true');
+        }
+        
+        // Network status
+        function updateNetworkStatus() {
+            const offlineBanner = document.getElementById('offlineBanner');
+            if (navigator.onLine) {
+                offlineBanner.style.display = 'none';
+            } else {
+                offlineBanner.style.display = 'block';
+            }
+        }
+        
+        window.addEventListener('online', updateNetworkStatus);
+        window.addEventListener('offline', updateNetworkStatus);
+        updateNetworkStatus();
+        
+        // Service Worker Registration
+        if ('serviceWorker' in navigator && window.location.protocol === 'https:') {
+            const swCode = `
+                const CACHE_NAME = 'squash-stretching-v1.1';
+                const OFFLINE_FALLBACK = '/index.html';
+                
+                self.addEventListener('install', event => {
+                    console.log('Service Worker installing...');
+                    event.waitUntil(
+                        caches.open(CACHE_NAME).then(cache => {
+                            console.log('Caching app shell');
+                            return cache.addAll([
+                                '/',
+                                '/index.html',
+                                'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
+                            ]).catch(err => {
+                                console.log('Cache failed for some resources:', err);
+                                return Promise.resolve();
+                            });
+                        })
+                    );
+                    self.skipWaiting();
+                });
+                
+                self.addEventListener('activate', event => {
+                    console.log('Service Worker activating...');
+                    event.waitUntil(
+                        caches.keys().then(cacheNames => {
+                            return Promise.all(
+                                cacheNames.map(cacheName => {
+                                    if (cacheName !== CACHE_NAME) {
+                                        console.log('Deleting old cache:', cacheName);
+                                        return caches.delete(cacheName);
+                                    }
+                                })
+                            );
+                        })
+                    );
+                    return self.clients.claim();
+                });
+                
+                self.addEventListener('fetch', event => {
+                    if (event.request.method !== 'GET') return;
+                    
+                    event.respondWith(
+                        caches.match(event.request)
+                            .then(response => {
+                                if (response) {
+                                    return response;
+                                }
+                                
+                                return fetch(event.request).catch(() => {
+                                    return caches.match(OFFLINE_FALLBACK);
+                                });
+                            })
+                    );
+                });
+            `;
+            
+            try {
+                const blob = new Blob([swCode], { type: 'application/javascript' });
+                const swUrl = URL.createObjectURL(blob);
+                
+                navigator.serviceWorker.register(swUrl)
+                    .then(registration => {
+                        console.log('✅ Service Worker registered:', registration.scope);
+                    })
+                    .catch(error => {
+                        console.warn('❌ Service Worker registration failed:', error);
+                    });
+            } catch (error) {
+                console.warn('❌ Service Worker creation failed:', error);
+            }
+        }
+        
+        // Prevent default mobile behaviors
+        document.addEventListener('touchstart', function(e) {
+            if (e.touches.length > 1) {
+                e.preventDefault(); // Prevent zoom
+            }
+        }, { passive: false });
+        
+        // Prevent pull-to-refresh
+        let startY = 0;
+        document.addEventListener('touchstart', e => {
+            startY = e.touches[0].pageY;
+        });
+        
+        document.addEventListener('touchmove', e => {
+            const y = e.touches[0].pageY;
+            if (startY <= y && window.pageYOffset === 0) {
+                e.preventDefault();
+            }
+        }, { passive: false });
+        
+        // Initialize App
+        const app = new StretchingApp();
+        
+        // Show install prompt after delay
+        setTimeout(() => {
+            if (!window.matchMedia('(display-mode: standalone)').matches && !localStorage.getItem('installDismissed')) {
+                showInstallPrompt();
+            }
+        }, 5000);
+    </script>
+</body>
+</html>
